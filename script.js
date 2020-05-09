@@ -1,13 +1,14 @@
 //Setting date into Nav
 console.log("Current Date", moment().format("MMMM Do YYYY"));
 console.log("Current Hour", moment().format("H"));
+//console.log("Current Time", moment().format('HH:mm:ss'));
 var currentDate = moment().format("MMMM Do YYYY");
 var navDate = $("#currentDate");
 navDate.text(currentDate);
 
 //Dynamically create planner div
 
-for (let time = 9; time <= 17; time++) {
+for (let time = 9; time <= 17; time++) {                   
 
     //Div for the row
     var plannerDiv = $("<div>");
@@ -51,7 +52,7 @@ for (let time = 9; time <= 17; time++) {
     //Changing color of each row to determine past/present/future 
     if (timeDiv.attr("data-hour") === moment().format("H")) {
         input.css("background-color", "green");
-    } else if (timeDiv.attr("data-hour") < moment().format("H")) {
+    } else if (parseInt(timeDiv.attr("data-hour")) < parseInt(moment().format("H"))) {
         input.css("background-color", "orange");
     }
 
@@ -59,6 +60,13 @@ for (let time = 9; time <= 17; time++) {
     save.on("click", function () {
         var dataHour = $(this).attr("data-hour");
         var content = $(".hour"+time).val()
+       
+        // Adding Click animation 
+        var saveButton = $(this)
+        saveButton.addClass("click");
+        setTimeout(function () {
+            saveButton.removeClass("click");
+        }, 100)
 
         localStorage.setItem(dataHour, content);
         console.log(dataHour, content);
@@ -67,7 +75,7 @@ for (let time = 9; time <= 17; time++) {
     $(".hour"+time).val(localStorage.getItem(time));
 };
 
-//Populate input from local storage *** Moved inside for loop to prevent repeating myself
+//Populate input from local storage *** Moved inside for-loop to prevent repeating myself
 // $(".hour9").val(localStorage.getItem("9"));
 // $(".hour10").val(localStorage.getItem("10"));
 // $(".hour11").val(localStorage.getItem("11"));
