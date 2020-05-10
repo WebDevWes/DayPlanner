@@ -1,7 +1,6 @@
 //Setting date into Nav
 console.log("Current Date", moment().format("MMMM Do YYYY"));
-console.log("Current Hour", moment().format("H"));
-//console.log("Current Time", moment().format('HH:mm:ss'));
+console.log("Current Time", moment().format('HH:mm:ss'));
 var currentDate = moment().format("MMMM Do YYYY");
 var navDate = $("#currentDate");
 navDate.text(currentDate);
