@@ -9,7 +9,7 @@ Object displayed on screen are dynamically generated using Javascript
 Utilization of moment.js to grab current day/time
 
 
-[Screenshot of Password Generator](/assets/DayPlanner.png)
+![Screenshot of Password Generator](/assets/DayPlanner.png)
 
 Github pages link : https://wesaboo.github.io/DayPlanner/
 
