@@ -1,3 +1,5 @@
+### Github pages link : https://wesaboo.github.io/DayPlanner/
+
 # DayPlanner
 
 Day Planner made to demonstrate utlization of Local Storage for multiple objects
@@ -11,5 +13,11 @@ Utilization of moment.js to grab current day/time
 
 ![Screenshot of Password Generator](/assets/DayPlanner.png)
 
-Github pages link : https://wesaboo.github.io/DayPlanner/
+### Technologies Used
 
+- HTML
+- CSS
+- Bootstrap
+- Javascript
+- jQuery
+- Moment.JS
