@@ -1,4 +1,8 @@
-### Github pages link : https://wesaboo.github.io/DayPlanner/
+### Github pages link : https://webdevwes.github.io/DayPlanner/
+
+### Github Username: WebDevWes
+
+Github Email Address: webdevwes89@gmail.com
 
 # DayPlanner
 
